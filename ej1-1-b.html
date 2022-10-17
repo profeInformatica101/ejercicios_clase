@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1-1 b</title>
+</head>
+<body>
+    <style>
+        #mensaje{
+            background-color: yellowgreen;
+            color:blue;
+            font-size: 100px;
+        }
+    </style>
+    <div id="mensaje"></div>
+    <script>
+
+        //Función que dado las hora, minutos y segundos me devuelve los segundos totales.
+        function total_segundos(hora, minutos, segundos){
+            return hora*3600 + minutos*60 + segundos;
+        }
+
+
+        // crea un nuevo objeto `Date`
+        var today = new Date();
+        //obtengo la hora, minutos y segundos actuales
+        var hora = today.getHours();
+        var minutos = today.getMinutes();
+        var segundos = today.getSeconds();
+
+        //Muestro la información
+        document.getElementById("mensaje").innerHTML = "Son las " + hora + ":" + minutos + ":" + segundos + "<br> Han trascurido "+ total_segundos(hora, minutos, segundos) + " segundos.";
+        
+        //Cada 1000 en milisegundos (milésimas de segundo) debe refrescar la página.
+        setInterval("location.reload()",1000);
+    </script>
+
+   
+</body>
+</html>
