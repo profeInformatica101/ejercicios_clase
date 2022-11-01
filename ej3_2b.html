@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.2.</title>
+</head>
+<body>
+    <script>
+        /**
+         3.2 Introduciendo un número en el teclado de ordenador, 
+         hallar cuántos números enteros múltiplos de tres, hay comprendidos entre la unidad y dicho número.
+        */
+
+        //########
+        // NOTA:  Un número n es múltiplo de 3 si se cumple 
+        //        que al dividirlo entre 3 el resto es 0 
+        //        En JS sería (n % 3 == 0) para comprobar si el resto es 0.
+        // #######
+
+        //Datos de entrada 
+        var n = parseInt(prompt("Dime un número: "));
+        console.log("n dato leido: " + n + ", tipo: " + typeof(n));
+
+
+        //Dato de salida
+        var total_multiplos = Math.trunc(n/3); 
+
+        document.write("En total hay " + total_multiplos + " multiplos de 3 hay entre la unidad y "+n);
+
+        
+
+
+    </script>
+</body>
