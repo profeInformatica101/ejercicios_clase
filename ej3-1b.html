@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.1.</title>
+</head>
+<body>
+    <style>
+        p{
+            font-size: 40px;
+            
+        }
+        #resultadoTabla{
+            font-size: 40px;
+        }
+    </style>
+    <script>
+        /**
+        3.1. Introduciendo un número en el teclado, 
+        imprimir la tabla de multiplicar de dicho número.
+        */
+
+        // Entrada Programa, variable de tipo número.
+        var num_multiplicar = -1;
+        //Salida Programa, variable de tipo texto.
+        var textoHTML = "";
+
+
+        /** Función que se usa cuando se cambia el rango */
+        function cambiarValor(){
+           
+            // Entrada Programa, variable de tipo número.
+            num_multiplicar = parseInt(document.getElementById("inputRangoID").value);
+
+            //Compruebo que los datos son correctos:
+            console.log("num_multiplicar - Dato: ", num_multiplicar,  ", Tipo: ", typeof num_multiplicar);        
+            
+            //Muestro el valor cambiado del Rango
+            document.getElementById("muestraRangoID").innerHTML =  num_multiplicar; 
+        
+            //Realizo operación y muesro la tabla de mutliplicar
+            muestraTabla();
+        }
+        /** Función que se utiliza para mostrar el resultado */
+        function muestraTabla(){
+            textoHTML = "";
+                for(var i=0; i<=10; i++){
+                        res = i * num_multiplicar;
+                        console.log("num_multiplicar - Dato: ", res,  ", Tipo: ", typeof res);        
+                        textoHTML += i + " x " + num_multiplicar + " = " + res + "<br>";
+                }
+
+            document.getElementById("resultadoTabla").innerHTML = textoHTML;
+        }
+
+    </script>
+
+    <p>Tabla del <span id="muestraRangoID">:) </span></p>
+    <input id="inputRangoID"  type="range" min="0" max="10" onchange="cambiarValor()">
+    <div id="resultadoTabla">
+
+    </div>
+</body>
+</html>
