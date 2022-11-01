@@ -9,8 +9,31 @@
 <body>
     <script>
         /**
-         3.1. Introduciendo un número en el teclado, imprimir la tabla de multiplicar de dicho número.
+        3.1. Introduciendo un número en el teclado, 
+        imprimir la tabla de multiplicar de dicho número.
         */
+
+        // Entrada Programa, variable de tipo número.
+        var num_multiplicar;
+        //Salida Programa, variable de tipo texto.
+        var salida_tabla_multiplicar = "";
+
+        //Pedimos al Usuario por un número
+        
+        num_multiplicar = parseInt(prompt("Dime un número:"));
+        texto = "";
+
+        for(var i=0; i<=10; i++){
+            //Realizo el calculo.
+            res = i * num_multiplicar;
+
+            texto = i + " x " + num_multiplicar + " = " + res + "<br>";
+            salida_tabla_multiplicar += texto;
+     
+        }
+
+        document.write(salida_tabla_multiplicar);
+
     </script>
 </body>
 </html>
