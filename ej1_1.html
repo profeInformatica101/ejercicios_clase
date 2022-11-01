@@ -7,10 +7,45 @@
     <title>Ejercicio 1.1.</title>
 </head>
 <body>
+    <style>
+        h1{
+            color: red;
+            background-color: yellow;
+        }
+    </style>
     <script>
         /**
          1.1. Introduciendo la hora del día en horas, minutos y segundos, calcular cuantos segundos han transcurrido desde el comiendo del día
         */
+
+        // Datos de entrada
+        var hora_actual = -1;
+        var min_actual = -1;
+        var seg_actual = -1;
+        
+        // Dato de salida
+        var segundos_totales = -1;
+        var mensaje = ""
+
+        //Pregunto al usuario por la hora actual
+        hora_actual = parseInt(prompt("Dime la hora: "));
+        min_actual = parseInt(prompt("Dime los minutos: "));
+        seg_actual = parseInt(prompt("Dime los segundos: "));
+
+        //Compruebo que los datos son correctos:
+        console.log("Dato hora_actual: ", hora_actual,  ", Tipo: ", typeof hora_actual);
+        console.log("Dato min_actual: ", min_actual,  ", Tipo: ", typeof min_actual);
+        console.log("Dato seg_actual: ", seg_actual,  ", Tipo: ", typeof seg_actual);
+
+
+        //Realizo la operación para calcular los segundos transcurridos por
+        segundos_totales = hora_actual * 3600 + min_actual * 60 + seg_actual;
+        
+        //Muestro el mensaje
+        mensaje = "<h1>Han transcurrido "+ segundos_totales + " segundos.</h1>";
+        document.write(mensaje);
+
+
     </script>
 </body>
 </html>
