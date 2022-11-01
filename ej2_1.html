@@ -7,10 +7,42 @@
     <title>Ejercicio 2.1.</title>
 </head>
 <body>
+    <style>
+        body{
+            background-color:black;
+        }
+        .agua{
+            color:aqua;
+        }
+        .hielo{
+            color:blue;
+        }
+        .vapor{
+            color:azure;
+        }
+    </style>
     <script>
         /**
-         2.1. Escriba, usando comparaciones, un algoritmo que muestre el estado del agua (hielo, líquido, vapor) en función de su temperatura.
+         2.1. Escriba, usando comparaciones, 
+         un algoritmo que muestre el estado del agua (hielo, líquido, vapor) 
+         en función de su temperatura.
         */
+
+        var temp = parseInt(prompt("Dime la tempratura: "));
+        temperatura(temp);
+
+        function temperatura(temp){
+            if(temp < 0){
+                console.log("HIELO");
+                document.write("<h1 class='hielo'> HIELO</h1>");
+            }else if(temp < 100){
+                console.log("LIQUIDO");
+                document.write("<h1 class='agua'>LIQUIDO</h1>");
+            }else{
+                console.log("VAPOR");
+                document.write("<h1 class='vapor'>VAPOR</h1>");
+            }
+        }
     </script>
 </body>
 </html>
